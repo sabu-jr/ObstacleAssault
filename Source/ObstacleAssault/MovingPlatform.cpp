@@ -2,6 +2,8 @@
 
 
 #include "MovingPlatform.h"
+#include "GameFramework/PlayerStart.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AMovingPlatform::AMovingPlatform()
@@ -15,7 +17,7 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 // Called every frame
@@ -23,5 +25,9 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	myNewVector = FVector(10958.025101,-2220.000000,1587.149999+5*DeltaTime);
+
+	SetActorLocation(myNewVector);
+	
 }
 
