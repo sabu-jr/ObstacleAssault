@@ -25,7 +25,7 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	myNewVector = FVector(10958.025101,-2220.000000,1587.149999+5*DeltaTime);
+	myNewVector = FVector(10958.025101,-2220.000000,1587.149999);
 
 	SetActorLocation(myNewVector);
 	
